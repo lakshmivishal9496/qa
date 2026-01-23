@@ -1,0 +1,142 @@
+:root {
+  --yellow: #ffcc00;
+  --white: #ffffff;
+  --dark-bg: #0f172a; /* Deep Navy/Black from video */
+  --card-bg: #1e293b;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--dark-bg);
+  color: var(--white);
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.content {
+  flex: 1; /* Pushes footer to bottom */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+/* World-Class Sticky Footer */
+.footer {
+  background-color: #020617;
+  padding: 40px 0;
+  border-top: 1px solid #1e293b;
+  text-align: center;
+  width: 100%;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 15px;
+}
+
+.social-icons a {
+  color: var(--yellow);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: translateY(-5px);
+  color: var(--white);
+}
+/* --- GLOBAL RESPONSIVE RULES --- */
+
+/* Adjusting the main content padding for smaller screens */
+@media (max-width: 1024px) {
+  .content {
+    padding: 40px 15px;
+  }
+}
+
+/* Tablet & Large Phones */
+@media (max-width: 768px) {
+  :root {
+    --header-size: 2rem; /* Scale down titles */
+  }
+
+  .content {
+    padding: 20px 10px;
+  }
+
+  /* Grid Fix: Change 3-column contributions to 1 or 2 columns */
+  .contributions-grid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+  }
+
+  /* 3D Experience Slider Adjustments */
+  .slider-wrapper {
+    width: 180px; 
+    height: 280px;
+    perspective: 800px;
+  }
+
+  .card-3d {
+    /* Brings cards closer to the center so they don't clip off-screen */
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(220px); 
+  }
+
+  .card-3d:hover {
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(240px);
+  }
+
+  .pixel-header {
+    font-size: 1.8rem;
+    margin-bottom: 40px;
+  }
+}
+
+/* Small Mobile Devices */
+@media (max-width: 480px) {
+  .pixel-header {
+    font-size: 1.5rem;
+  }
+
+  /* Compact 3D Slider for very small screens */
+  .card-3d {
+    width: 150px;
+    height: 220px;
+    transform: rotateY(calc(var(--i) * 72deg)) translateZ(160px);
+  }
+
+  .card-content h3 {
+    font-size: 0.9rem;
+  }
+
+  /* Journey/Contact Section Fix */
+  .journey-track {
+    height: 80px; /* Shorter track */
+  }
+
+  .man {
+    width: 80px;
+    height: 80px;
+  }
+
+  .country-label {
+    font-size: 1.5rem; /* Stop text overlapping */
+  }
+
+  /* Footer Adjustments */
+  .social-icons {
+    gap: 15px;
+  }
+  
+  .social-icons a {
+    font-size: 1.2rem;
+  }
+}

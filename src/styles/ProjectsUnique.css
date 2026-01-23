@@ -1,0 +1,168 @@
+
+/* ===============================
+   ROOT VARIABLES (optional)
+================================ */
+:root {
+  --bg-dark: #0f172a;
+  --border-dark: #334155;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --accent-yellow: #ffcc00;
+}
+
+/* ===============================
+   PORTFOLIO ROW LAYOUT
+================================ */
+.portfolio-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  margin-bottom: 120px;
+}
+
+/* Alternate row layout */
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+/* Optional staggered offset */
+.portfolio-row:nth-child(even) {
+  margin-left: 80px;
+}
+
+/* ===============================
+   IMAGE SECTION
+================================ */
+.portfolio-image {
+  flex: 1;
+  max-width: 520px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-dark);
+  background: #020617;
+}
+
+/* Image resize — VERY IMPORTANT */
+.main-img {
+  width: 100%;
+  height: 360px;       /* Consistent height */
+  object-fit: contain;   /* Prevent stretching */
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+/* Optional hover effect */
+.portfolio-image:hover .main-img {
+  transform: scale(1.05);
+}
+
+/* ===============================
+   TEXT SECTION
+================================ */
+.portfolio-text {
+  flex: 1;
+  max-width: 620px;
+}
+
+/* Organization label */
+.org-label {
+  color: var(--text-muted);
+  letter-spacing: 2px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+/* Title animation */
+.falling-yellow-title {
+  color: var(--accent-yellow);
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 12px 0 18px;
+  animation: fallEffect 0.8s ease-out forwards;
+}
+
+/* Clean description */
+.project-desc-clean {
+  color: var(--text-main);
+  line-height: 1.8;
+  font-size: 1.15rem;
+  margin-bottom: 20px;
+}
+
+/* ===============================
+   TAG STYLES
+================================ */
+.tag-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.yellow-outline-tag {
+  border: 1px solid var(--accent-yellow);
+  color: var(--accent-yellow);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-family: monospace;
+  transition: all 0.25s ease;
+}
+
+.yellow-outline-tag:hover {
+  background: var(--accent-yellow);
+  color: #020617;
+}
+
+/* ===============================
+   ANIMATIONS
+================================ */
+@keyframes fallEffect {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===============================
+   RESPONSIVE DESIGN
+================================ */
+@media (max-width: 1024px) {
+  .portfolio-row {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 900px) {
+  .portfolio-row,
+  .row-reverse {
+    flex-direction: column;
+  }
+
+  .portfolio-row:nth-child(even) {
+    margin-left: 0;
+  }
+
+  .portfolio-image {
+    max-width: 100%;
+  }
+
+  .main-img {
+    height: 260px;
+  }
+
+  .falling-yellow-title {
+    font-size: 2rem;
+  }
+
+  .portfolio-text {
+    max-width: 100%;
+  }
+}
+

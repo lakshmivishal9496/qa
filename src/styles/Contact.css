@@ -1,0 +1,78 @@
+.contact-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background-color: #0f172a;
+}
+
+/* JOURNEY ANIMATION */
+.journey-track {
+  position: relative;
+  height: 120px;
+  border-bottom: 2px solid #334155;
+  margin-bottom: 60px;
+  overflow: hidden; /* Keeps the man within the track area */
+}
+
+.man {
+  position: absolute;
+  bottom: 0;
+  width: 100px;
+  height: 100px;
+  background: url('/assets/LAK.png');/* The Sprite Sheet */
+  background-size: cover;
+}
+
+/* Combined Animation: move across AND walk legs */
+.moving-man {
+  animation: 
+    walkCycle 0.8s steps(8) infinite, 
+    moveAcross 15s linear infinite;
+}
+
+@keyframes walkCycle {
+  from { background-position: 0; }
+  to { background-position: -800px; } /* Adjust based on your sprite sheet width */
+}
+
+@keyframes moveAcross {
+  0% { left: -10%; }
+  100% { left: 110%; }
+}
+
+
+
+.country-label {
+  position: absolute;
+  bottom: 10px;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.05);
+  font-size: 3rem;
+  z-index: 1;
+}
+
+.india { left: 5%; }
+.sweden { right: 5%; }
+
+/* TYPING TEXT */
+.typing-container {
+  font-size: 1.8rem;
+  color: #ffcc00;
+  font-family: monospace;
+  min-height: 2.5rem;
+}
+
+.cursor { animation: blink 0.8s infinite; }
+@keyframes blink { 50% { opacity: 0; } }
+
+/* REST OF STYLING */
+.bio-card, .info-panel, .vision-panel {
+  background: #1e293b;
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid #334155;
+  margin-top: 20px;
+}
+
+.highlight { color: #ffcc00; }
+.info-icon { color: #ffcc00; margin-right: 10px; }
