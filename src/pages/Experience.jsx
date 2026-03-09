@@ -13,35 +13,35 @@ const Experience = () => {
       title: "Full Stack Intern", 
       company: "Koenigsegg", 
       location: "Ängelholm",
-      duration: "2023 - 2024",
+      duration: "Oct 2023 - Mar 2024",
       description: "Developed automotive software solutions and internal tools"
     },
     { 
       title: "Mobile App Intern", 
       company: "Assimilatus AB", 
       location: "Lund",
-      duration: "2023", 
+      duration: "Oct 2024 - Nov 2024", 
       description: "Built cross-platform mobile applications using React Native"
     },
     { 
       title: "Thesis Researcher", 
       company: "Axis Communications", 
       location: "Lund",
-      duration: "2022",
+      duration: "Jan 2025 - June 2025",
       description: "Researched AI-powered video analytics and surveillance systems"
     },
     { 
       title: "Automation Tester", 
       company: "Legrand", 
       location: "Löddeköpinge",
-      duration: "2021 - 2022",
+      duration: "Aug 2025 - Oct 2025",
       description: "Automated testing frameworks for IoT smart home products"
     },
     { 
       title: "QA Intern", 
       company: "Axis Communications", 
       location: "Lund",
-      duration: "2021",
+      duration: "Nov 2025 - Jan 2025",
       description: "Quality assurance for network camera firmware and software"
     }
   ];
