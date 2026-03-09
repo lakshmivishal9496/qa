@@ -20,7 +20,7 @@ const Experience = () => {
       title: "Mobile App Intern", 
       company: "Assimilatus AB", 
       location: "Lund",
-      duration: "2022 - 2023", 
+      duration: "2023", 
       description: "Built cross-platform mobile applications using React Native"
     },
     { 
