@@ -1,163 +1,113 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
+
 import '../styles/Experience.css';
 
-const Experience = () => {
-  const [isPaused, setIsPaused] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(null);
-  const sliderRef = useRef(null);
-  const rotateRef = useRef(0);
-  const animationRef = useRef(null);
 
-  const jobs = [
-    { 
-      title: "Full Stack Intern", 
-      company: "Koenigsegg", 
-      location: "Ängelholm",
-      duration: "Oct 2023 - Mar 2024",
-      description: "Developed automotive software solutions and internal tools"
-    },
-    { 
-      title: "Mobile App Intern", 
-      company: "Assimilatus AB", 
-      location: "Lund",
-      duration: "Oct 2024 - Nov 2024", 
-      description: "Built cross-platform mobile applications using React Native"
-    },
-    { 
-      title: "Thesis Researcher", 
-      company: "Axis Communications", 
-      location: "Lund",
-      duration: "Jan 2025 - June 2025",
-      description: "Researched AI-powered video analytics and surveillance systems"
-    },
-    { 
-      title: "Automation Tester", 
-      company: "Legrand", 
-      location: "Löddeköpinge",
-      duration: "Aug 2025 - Oct 2025",
-      description: "Automated testing frameworks for IoT smart home products"
-    },
-    { 
-      title: "QA Intern", 
-      company: "Axis Communications", 
-      location: "Lund",
-      duration: "Nov 2025 - Jan 2025",
-      description: "Quality assurance for network camera firmware and software"
-    }
-  ];
+
+const Experience = () => {
+
+  const sliderRef = useRef(null);
+
+
 
   useEffect(() => {
+
+    // 3D Slider Logic from Online Tutorials [00:02:28]
+
     const slider = sliderRef.current;
-    
+
+    let rotateVal = 0;
+
+
+
     const autoRotate = () => {
-      if (!isPaused && selectedIndex === null) {
-        rotateRef.current += 0.2; // Slower rotation
-        if (slider) {
-          slider.style.transform = `perspective(1200px) rotateY(${rotateRef.current}deg)`;
-        }
+
+      rotateVal += 0.5;
+
+      if (slider) {
+
+        slider.style.transform = `perspective(1000px) rotateY(${rotateVal}deg)`;
+
       }
-      animationRef.current = requestAnimationFrame(autoRotate);
+
+      requestAnimationFrame(autoRotate);
+
     };
-    
+
     autoRotate();
-    
-    return () => {
-      if (animationRef.current) {
-        cancelAnimationFrame(animationRef.current);
-      }
-    };
-  }, [isPaused, selectedIndex]);
 
-  const handleCardClick = (index) => {
-    const targetRotation = -index * 72; // Snap to clicked card
-    rotateRef.current = targetRotation;
-    setSelectedIndex(index);
-    
-    const slider = sliderRef.current;
-    if (slider) {
-      slider.style.transform = `perspective(1200px) rotateY(${targetRotation}deg)`;
-      slider.style.transition = 'transform 0.6s ease-in-out';
-    }
-  };
+  }, []);
 
-  const handleClose = () => {
-    setSelectedIndex(null);
-    const slider = sliderRef.current;
-    if (slider) {
-      slider.style.transition = 'none';
-    }
-  };
+
+
+  const jobs = [
+
+    { title: "Full Stack Intern", company: "Koenigsegg", location: "Ängelholm" },
+
+    { title: "Mobile App Intern", company: "Assimilatus AB", location: "Lund" },
+
+    { title: "Thesis Researcher", company: "Axis Communications", location: "Lund" },
+
+    { title: "Automation Tester", company: "Legrand", location: "Löddeköpinge" },
+
+    { title: "QA Intern", company: "Axis Communications", location: "Lund" }
+
+  ];
+
+
 
   return (
+
     <div className="experience-container">
-      <div className="header-section">
-        <h2 className="section-title">Professional Experience</h2>
-        <p className="section-subtitle">Click any card to read details • Hover to pause rotation</p>
-      </div>
-      
-      {/* Timeline View for Mobile/Tablet */}
-      <div className="timeline-view">
-        {jobs.map((job, index) => (
-          <div className="timeline-item" key={index}>
-            <div className="timeline-marker"></div>
-            <div className="timeline-content">
-              <span className="timeline-date">{job.duration}</span>
-              <h3>{job.title}</h3>
-              <h4>{job.company} • {job.location}</h4>
-              <p>{job.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
 
-      {/* 3D Carousel for Desktop */}
-      <div 
-        className="slider-wrapper"
-        onMouseEnter={() => setIsPaused(true)}
-        onMouseLeave={() => setIsPaused(false)}
-      >
+      <h2 className="pixel-header">Career <span className="highlight">Milestones</span></h2>
+
+     
+
+      <div className="slider-wrapper">
+
         <div className="slider-3d" ref={sliderRef}>
+
           {jobs.map((job, index) => (
-            <div 
-              className={`card-3d ${selectedIndex === index ? 'selected' : ''}`}
-              key={index} 
+
+            <div
+
+              className="card-3d"
+
+              key={index}
+
               style={{ '--i': index + 1 }}
-              onClick={() => handleCardClick(index)}
+
             >
+
               <div className="card-content">
-                <span className="job-duration">{job.duration}</span>
+
+                <span className="job-tag">{job.location}</span>
+
                 <h3>{job.title}</h3>
+
                 <h4>{job.company}</h4>
-                <span className="job-location">📍 {job.location}</span>
-                
-                {selectedIndex === index && (
-                  <div className="expanded-content">
-                    <p>{job.description}</p>
-                    <button className="close-btn" onClick={(e) => {
-                      e.stopPropagation();
-                      handleClose();
-                    }}>✕</button>
-                  </div>
-                )}
+
+                {/* Pixelated Hover Effect target [00:00:10] */}
+
+                <div className="pixel-overlay"></div>
+
               </div>
+
             </div>
+
           ))}
+
         </div>
+
       </div>
 
-      {/* Quick Navigation Dots */}
-      <div className="nav-dots">
-        {jobs.map((_, index) => (
-          <button
-            key={index}
-            className={`dot ${selectedIndex === index ? 'active' : ''}`}
-            onClick={() => handleCardClick(index)}
-            aria-label={`View ${jobs[index].title}`}
-          />
-        ))}
-      </div>
     </div>
+
   );
+
 };
+
+
 
 export default Experience;
