@@ -7,7 +7,7 @@ const Contributions = () => {
     {
       title: "Advanced Log Analysis Thesis",
       subtitle: "Automated Firmware Error Detection",
-      desc: "Detailed documentation of my 2025 Thesis work on Confluence, covering every step of the log analysis automation for ARM processors.",
+      desc: "Detailed documentation of my 2025 Thesis work on Confluence, covering every step of the log analysis automation for ACS Secure Entry Component.",
       link: "https://confluence.se.axis.com/spaces/PT/pages/548997017/Thesis+2025+-+Advanced+Log+Analysis",
       icon: <FaMicrochip />,
       tag: "Process"
@@ -41,7 +41,7 @@ const Contributions = () => {
   const docsInitiative = [
     {
       title: "ACS Secure Entry Documentation",
-      subtitle: "MSM Master Documentation",
+      subtitle: "MSM Documentation",
       desc: "Understood every nook and corner of ACS Secure Entry to create comprehensive test cases and product logic guides.",
       link: "https://confluence.se.axis.com/pages/viewpage.action?pageId=712211015&spaceKey=PT&title=ACS%2BPro%2BSoftware%2BIntroduction",
       icon: <FaFileAlt />,
