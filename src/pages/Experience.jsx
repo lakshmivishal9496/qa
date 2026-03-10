@@ -92,7 +92,6 @@ const Experience = () => {
     <div className="experience-container">
       <div className="header-section">
         <h2 className="section-title">Professional Experience</h2>
-         <br>
         <p className="section-subtitle"> Hover to pause rotation and read more about each experience</p>
       </div>
       
