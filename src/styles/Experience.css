@@ -13,13 +13,14 @@
 .section-title {
   font-size: 2.5rem;
   color: #fff;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
 .section-subtitle {
   color: #94a3b8;
   font-size: 0.95rem;
+  margin-bottom: 50px;
 }
 
 /* Timeline View - Shows on Mobile/Tablet */
