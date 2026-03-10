@@ -92,7 +92,8 @@ const Experience = () => {
     <div className="experience-container">
       <div className="header-section">
         <h2 className="section-title">Professional Experience</h2>
-        <p className="section-subtitle">Click any card to read details • Hover to pause rotation</p>
+         <br>
+        <p className="section-subtitle"> Hover to pause rotation and read more about each experience</p>
       </div>
       
       {/* Timeline View for Mobile/Tablet */}
