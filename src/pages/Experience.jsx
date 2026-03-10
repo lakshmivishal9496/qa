@@ -89,75 +89,96 @@ const Experience = () => {
   };
 
   return (
+    
+  <>
     <div className="experience-container">
+      
       <div className="header-section">
         <h2 className="section-title">Professional Experience</h2>
-        <p className="section-subtitle"> Hover to pause rotation and read more about each experience</p>
+        <p className="section-subtitle">
+          Hover to pause rotation and read more about each experience
+        </p>
       </div>
-      
-      {/* Timeline View for Mobile/Tablet */}
+
+      {/* Timeline View */}
       <div className="timeline-view">
         {jobs.map((job, index) => (
           <div className="timeline-item" key={index}>
             <div className="timeline-marker"></div>
+
             <div className="timeline-content">
               <span className="timeline-date">{job.duration}</span>
               <h3>{job.title}</h3>
               <h4>{job.company} • {job.location}</h4>
               <p>{job.description}</p>
             </div>
+
           </div>
         ))}
       </div>
 
-      {/* 3D Carousel for Desktop */}
-      <div 
+      {/* Carousel */}
+      <div
         className="slider-wrapper"
         onMouseEnter={() => setIsPaused(true)}
         onMouseLeave={() => setIsPaused(false)}
       >
         <div className="slider-3d" ref={sliderRef}>
+
           {jobs.map((job, index) => (
-            <div 
-              className={`card-3d ${selectedIndex === index ? 'selected' : ''}`}
-              key={index} 
-              style={{ '--i': index + 1 }}
+            <div
+              key={index}
+              className={`card-3d ${selectedIndex === index ? "selected" : ""}`}
+              style={{ "--i": index + 1 }}
               onClick={() => handleCardClick(index)}
             >
               <div className="card-content">
+
                 <span className="job-duration">{job.duration}</span>
                 <h3>{job.title}</h3>
                 <h4>{job.company}</h4>
                 <span className="job-location">📍 {job.location}</span>
-                
+
                 {selectedIndex === index && (
                   <div className="expanded-content">
+
                     <p>{job.description}</p>
-                    <button className="close-btn" onClick={(e) => {
-                      e.stopPropagation();
-                      handleClose();
-                    }}>✕</button>
+
+                    <button
+                      className="close-btn"
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        handleClose();
+                      }}
+                    >
+                      ✕
+                    </button>
+
                   </div>
                 )}
+
               </div>
             </div>
           ))}
+
         </div>
       </div>
 
-      {/* Quick Navigation Dots */}
+      {/* Navigation dots */}
       <div className="nav-dots">
         {jobs.map((_, index) => (
           <button
             key={index}
-            className={`dot ${selectedIndex === index ? 'active' : ''}`}
+            className={`dot ${selectedIndex === index ? "active" : ""}`}
             onClick={() => handleCardClick(index)}
             aria-label={`View ${jobs[index].title}`}
           />
         ))}
       </div>
+
     </div>
-  );
+  </>
+);
 };
 
 export default Experience;
