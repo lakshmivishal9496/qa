@@ -4,10 +4,10 @@ import {
   FaRunning,
   FaBrain,
   FaRobot,
-  FaFigma,
   FaUsers,
   FaPalette,
-  FaProjectDiagram
+  FaProjectDiagram,
+  FaGithub
 } from "react-icons/fa";
 import "../styles/Contributions.css";
 
