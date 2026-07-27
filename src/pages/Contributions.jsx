@@ -150,6 +150,34 @@ const softwareProjects = [
           ))}
         </div>
       </section>
+      {/* Software Development Projects */}
+<section className="contrib-section">
+  <h2 className="section-label">
+    <FaGithub /> Software Development Projects
+  </h2>
+
+  <div className="contributions-grid">
+    {softwareProjects.map((item, index) => (
+      <div className="contribution-card" key={index}>
+        <div className="card-tag">{item.tag}</div>
+        <div className="card-icon">{item.icon}</div>
+
+        <h3>{item.title}</h3>
+        <h4>{item.subtitle}</h4>
+        <p>{item.desc}</p>
+
+        <a
+          href={item.link}
+          target="_blank"
+          rel="noreferrer"
+          className="view-btn"
+        >
+          {item.button}
+        </a>
+      </div>
+    ))}
+  </div>
+</section>
 
       {/* UX Research */}
       <section className="contrib-section">
