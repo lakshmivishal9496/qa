@@ -82,7 +82,7 @@ I apply this creative mindset to ensure systems deliver both functional reliabil
           </div>
           <div className="vision-panel">
             <h3>Vision</h3>
-            <p>I don’t just test software—I protect the user’s experience.To grow into a QA professional who drives quality across the entire release lifecycle. </p>
+            <p>I bridge user needs and technology by transforming research into intuitive designs, turning designs into functional products, and ensuring quality through testing. My focus is delivering end-to-end product experiences that users trust and enjoy. </p>
           </div>
         </div>
       </section>

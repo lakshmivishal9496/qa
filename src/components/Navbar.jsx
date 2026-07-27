@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="nav-logo">
         <FaBug className="logo-icon" />
-        <span>LVH<span>.QA</span></span>
+        <span>LVH</span>
       </div>
       <div className="nav-links">
         <NavLink to="/" className={({ isActive }) => (isActive ? "active" : "")}>
