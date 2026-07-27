@@ -7,14 +7,14 @@ const Home = () => {
     <div className="home-container">
       <section className="hero-section">
         <div className="hero-content">
-          <div className="badge">Currently Interning @ Axis Communications</div>
+          <div className="badge"> Creative and Innovative Problem Solver</div>
           <h1>Lakshmi Vishal Hayagrivan</h1>
           <h2>
-            Quality Assurance Engineer <span className="highlight"></span>
+            UX Researcher & UI Designer  <span className="highlight"></span>
           </h2>
           <p>
-            Bridging the gap between <strong>hardware reliability</strong> and <strong>software precision</strong>. 
-            Focused on delivering high-quality Axis ecosystem solutions through rigorous testing. 
+            Bridging the gap between <strong>user needs</strong> and <strong>software solutions</strong>. 
+            Focused on delivering high-quality user experiences and seamless interactions. 
           </p>
           <div className="hero-btns">
             <Link to="/projects" className="btn-primary">
@@ -36,31 +36,43 @@ const Home = () => {
         </div>
       </section>
 
-      <section className="stats-grid">
-        <div className="stat-card">
-          <div className="stat-header">
-            <FaSearch className="stat-icon" />
-            <h3>Manual & Exploratory Tester</h3>
-          </div>
-          <p>Extensive experience testing Axis Communication Access Control devices, controllers, and readers.</p>
-        </div>
-        
-        <div className="stat-card">
-          <div className="stat-header">
-            <FaCogs className="stat-icon" />
-            <h3>Functional & Automation Tester</h3>
-          </div>
-          <p>Built automation frameworks using C# and Selenium. proficient in unit testing, integration testing, user acceptance testing (UAT), and black box testing. </p>
-        </div>
-        
-        <div className="stat-card">
-          <div className="stat-header">
-            <FaUsers className="stat-icon" />
-            <h3>Agile Team Player</h3>
-          </div>
-          <p>Collaborative experience within QA and development teams to improve product quality in Agile environments.</p>
-        </div>
-      </section>
+  <section className="stats-grid">
+  <div className="stat-card">
+    <div className="stat-header">
+      <FaSearch className="stat-icon" />
+      <h3>UX/UI & Product Design</h3>
+    </div>
+    <p>
+      Designing intuitive and user-friendly digital experiences through
+      user research, wireframing, prototyping, and interface design with
+      a strong focus on usability and accessibility.
+    </p>
+  </div>
+
+  <div className="stat-card">
+    <div className="stat-header">
+      <FaCogs className="stat-icon" />
+      <h3>Software Development</h3>
+    </div>
+    <p>
+      Experience with C#, web development, React, full-stack development,
+      Git version control, agile methodologies, and quality-focused
+      software engineering practices.
+    </p>
+  </div>
+
+  <div className="stat-card">
+    <div className="stat-header">
+      <FaUsers className="stat-icon" />
+      <h3>Collaboration & Innovation</h3>
+    </div>
+    <p>
+      Passionate about working in international, cross-functional teams,
+      taking initiative, embracing feedback, and contributing to
+      innovative, high-quality digital products.
+    </p>
+  </div>
+</section>
     </div>
   );
 };

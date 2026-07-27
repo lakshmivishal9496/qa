@@ -1,98 +1,131 @@
-import React from 'react';
-import { FaFileAlt, FaMicrochip, FaFigma, FaSearch, FaDatabase, FaNetworkWired, FaBookOpen, FaLightbulb } from 'react-icons/fa';
-import '../styles/Contributions.css';
+import React from "react";
+import {
+  FaSeedling,
+  FaRunning,
+  FaBrain,
+  FaRobot,
+  FaFigma,
+  FaUsers,
+  FaPalette,
+  FaProjectDiagram
+} from "react-icons/fa";
+import "../styles/Contributions.css";
 
 const Contributions = () => {
-  const thesisWork = [
-    {
-      title: "Advanced Log Analysis Thesis",
-      subtitle: "Automated Firmware Error Detection",
-      desc: "Detailed documentation of my 2025 Thesis work on Confluence, covering every step of the log analysis automation for ACS Secure Entry Component.",
-      link: "https://confluence.se.axis.com/spaces/PT/pages/548997017/Thesis+2025+-+Advanced+Log+Analysis",
-      icon: <FaMicrochip />,
-      tag: "Process"
-    },
-    {
-      title: "Figma UI/UX Prototype",
-      subtitle: "Visualizing Automated Analysis",
-      desc: "Designed the interactive prototype for the log analysis tool, ensuring the complex data remains user-friendly for engineers.",
-      link: "https://www.figma.com/proto/N4lC2XzR0YTCr7pNfylcKF/Axis_Log_Analysis",
-      icon: <FaFigma />,
-      tag: "Design"
-    },
-    {
-      title: "User Research (Miro)",
-      subtitle: "Stakeholder Discovery",
-      desc: "Initiative to conduct user research and mapping to ensure the tool solves real-world firmware debugging pain points.",
-      link: "https://miro.com/app/board/uXjVIGR5dps=/",
-      icon: <FaSearch />,
-      tag: "Research"
-    },
-    {
-      title: "Thesis Final Record",
-      subtitle: "SharePoint Repository",
-      desc: "The official dispersion form and final submission record for the thesis project at Axis.",
-      link: "https://axis365.sharepoint.com/sites/Theses/Lists/Project%20list/DispForm.aspx?ID=435",
-      icon: <FaNetworkWired />,
-      tag: "Official"
-    }
-  ];
+ const featuredProjects = [
+  {
+    title: "Virtual Gardener",
+    subtitle: "IoT Mobile UX Design",
+    desc: "Designed an intuitive mobile experience that helps users monitor plant health through real-time sensor data, disease detection, and weather insights. Focused on clear data visualization and actionable user feedback.",
+    link: "YOUR_VIRTUAL_GARDENER_FIGMA_LINK",
+    icon: <FaSeedling />,
+    tag: "Mobile UX",
+    button: "View Figma"
+  },
+  {
+    title: "Sports Union Platform",
+    subtitle: "Web Application Design",
+    desc: "Designed and developed a responsive event management platform for university students. Created user-centered interfaces for students and administrators using Figma before implementing the frontend in React.",
+    link: "YOUR_SPORTS_UNION_FIGMA_LINK",
+    icon: <FaRunning />,
+    tag: "Web Design",
+    button: "View Figma"
+  },
+  {
+    title: "Soft Health",
+    subtitle: "Mental Wellness Desktop App",
+    desc: "Created a calming desktop interface that delivers personalized wellness recommendations based on MBTI personality assessments, balancing accessibility with an empathetic user experience.",
+    link: "YOUR_SOFT_HEALTH_FIGMA_LINK",
+    icon: <FaBrain />,
+    tag: "Desktop UX",
+    button: "View Figma"
+  }
+];
 
-  const docsInitiative = [
-    {
-      title: "ACS Secure Entry Documentation",
-      subtitle: "MSM Documentation",
-      desc: "Understood every nook and corner of ACS Secure Entry to create comprehensive test cases and product logic guides.",
-      link: "https://confluence.se.axis.com/pages/viewpage.action?pageId=712211015&spaceKey=PT&title=ACS%2BPro%2BSoftware%2BIntroduction",
-      icon: <FaFileAlt />,
-      tag: "Quality"
-    },
-    {
-      title: "JMeter Performance Guide",
-      subtitle: "Standardizing Functional Tests",
-      desc: "Initiative to document and guide JMeter test cases, ensuring consistent performance benchmarking across teams.",
-      link: "https://confluence.se.axis.com/pages/resumedraft.action?draftId=736855876",
-      icon: <FaDatabase />,
-      tag: "Automation"
-    }
-  ];
+const uxResearch = [
+  {
+    title: "Log Analysis Dashboard",
+    subtitle: "Master's Thesis",
+    desc: "Designed an AI-assisted dashboard that simplifies complex firmware log analysis using multi-agent LLM workflows. Conducted UX research, designed user flows, wireframes, and interactive prototypes to improve interpretability.",
+    link: "YOUR_LOG_ANALYSIS_CASE_STUDY_LINK",
+    icon: <FaRobot />,
+    tag: "AI + UX",
+    button: "View Case Study"
+  },
+  {
+    title: "Axis Camera Station",
+    subtitle: "UX Case Study",
+    desc: "A comprehensive UX case study exploring how QA engineers interpret access control logs. Included user interviews, personas, journey mapping, accessibility improvements, and AI-assisted visualization concepts.",
+    link: "YOUR_AXIS_CAMERA_STATION_CASE_STUDY_LINK",
+    icon: <FaUsers />,
+    tag: "Case Study",
+    button: "View Case Study"
+  }
+];
 
   return (
     <div className="contributions-page">
       <div className="header-content">
-        <h1>Core <span className="highlight">Contributions</span></h1>
-        <p>Merging Technical Research with Systematic Documentation</p>
+        <h1>
+          UX/UI <span className="highlight">Portfolio</span>
+        </h1>
+        <p>
+          Designing meaningful digital experiences through research,
+          interaction design, and user-centered innovation.
+        </p>
       </div>
 
-      {/* SECTION 1: THESIS & DESIGN */}
+      {/* Featured Projects */}
       <section className="contrib-section">
-        <h2 className="section-label"><FaBookOpen /> Thesis & UX Research</h2>
+        <h2 className="section-label">
+          <FaPalette /> Featured Design Projects
+        </h2>
+
         <div className="contributions-grid">
-          {thesisWork.map((item, index) => (
+          {featuredProjects.map((item, index) => (
             <div className="contribution-card" key={index}>
               <div className="card-tag">{item.tag}</div>
               <div className="card-icon">{item.icon}</div>
               <h3>{item.title}</h3>
               <h4>{item.subtitle}</h4>
               <p>{item.desc}</p>
-              <a href={item.link} target="_blank" rel="noreferrer" className="view-btn">View Platform</a>
+
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="view-btn"
+              >
+                View Figma
+              </a>
             </div>
           ))}
         </div>
       </section>
 
-      {/* SECTION 2: DOCUMENTATION INITIATIVE */}
+      {/* UX Research */}
       <section className="contrib-section">
-        <h2 className="section-label"><FaLightbulb /> Documentation Initiatives</h2>
+        <h2 className="section-label">
+          <FaProjectDiagram /> UX Research & Case Studies
+        </h2>
+
         <div className="contributions-grid mini-grid">
-          {docsInitiative.map((item, index) => (
+          {uxResearch.map((item, index) => (
             <div className="contribution-card doc-highlight" key={index}>
               <div className="card-tag">{item.tag}</div>
               <div className="card-icon">{item.icon}</div>
               <h3>{item.title}</h3>
               <h4>{item.subtitle}</h4>
               <p>{item.desc}</p>
-              <a href={item.link} target="_blank" rel="noreferrer" className="view-btn">View Platform</a>
+
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="view-btn"
+              >
+                View Case Study
+              </a>
             </div>
           ))}
         </div>

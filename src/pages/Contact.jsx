@@ -6,12 +6,11 @@ const Contact = () => {
   useEffect(() => {
     // Online Tutorials style typing effect logic (Standard JS)
     const textElement = document.querySelector('.typing-text');
-    const phrases = [
-      "I am QA Engineer.",
-      "QA supporting high‑quality releases",
-       "QA improving service release quality.",
-      "Originally from India, now in Åstorp, Sweden.",
-      "Available starting March 2026."
+const phrases = [
+      "UX/UI & Product Developer bridging user needs and software systems.",
+      "Leveraging C#, automation frameworks, and QA expertise to ensure robust digital products.",
+      "Originally from India, now based in Åstorp, Sweden.",
+      "Available starting August 2026."
     ];
     
     let i = 0, j = 0;
@@ -51,7 +50,7 @@ const Contact = () => {
           {/* We use the CSS class 'moving-man' to handle the movement */}
           <div className="man moving-man"></div>
           <div className="country-label india">GRADUATE</div>
-          <div className="country-label sweden">QA TESTARE</div>
+          <div className="country-label sweden">PRODUCT DESIGNER</div>
         </div>
 
         <div className="about-content">
@@ -63,7 +62,7 @@ const Contact = () => {
           <div className="bio-card">
             <FaPalette className="bio-icon" />
             <p>
-              My passion is <strong>Art</strong>. My passion for art sharpened my eye for detail, balance, and usability, which naturally led me into QA.
+              My passion is <strong>Art</strong>. My passion for art sharpened my eye for detail, balance, and usability, which naturally led me into UX/UI design.
 I apply this creative mindset to ensure systems deliver both functional reliability and a seamless user experience.
             </p>
           </div>
