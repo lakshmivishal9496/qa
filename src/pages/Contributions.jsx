@@ -15,51 +15,99 @@ const Contributions = () => {
  const featuredProjects = [
   {
     title: "Virtual Gardener",
-    subtitle: "IoT Mobile UX Design",
+    subtitle: "IoT Mobile UX Design (Year 3 Project at HKR)",
     desc: "Designed an intuitive mobile experience that helps users monitor plant health through real-time sensor data, disease detection, and weather insights. Focused on clear data visualization and actionable user feedback.",
-    link: "YOUR_VIRTUAL_GARDENER_FIGMA_LINK",
+    link: "https://www.figma.com/design/3I1Clqzpi4LdUOSiRA6IU3/Virtual-Gardener--Copy-?node-id=0-1&t=PUGfh29f2mDLjoQb-0",
     icon: <FaSeedling />,
     tag: "Mobile UX",
     button: "View Figma"
   },
   {
-    title: "Sports Union Platform",
-    subtitle: "Web Application Design",
+    title: "Sports Union Platform for Högskolan Kristianstad Students",
+    subtitle: "Web Application Design & Development (Year 2 Project at HKR)",
     desc: "Designed and developed a responsive event management platform for university students. Created user-centered interfaces for students and administrators using Figma before implementing the frontend in React.",
-    link: "YOUR_SPORTS_UNION_FIGMA_LINK",
+    link: "https://www.figma.com/design/iAEBH2D7RQWcpzFFZfVuvT/HkIF?node-id=0-1&p=f&t=SAIaHfT1feCMK2ig-0",
     icon: <FaRunning />,
     tag: "Web Design",
     button: "View Figma"
   },
   {
     title: "Soft Health",
-    subtitle: "Mental Wellness Desktop App",
+    subtitle: "Mental Wellness Desktop App (Year 1 Project at HKR)",
     desc: "Created a calming desktop interface that delivers personalized wellness recommendations based on MBTI personality assessments, balancing accessibility with an empathetic user experience.",
     link: "YOUR_SOFT_HEALTH_FIGMA_LINK",
     icon: <FaBrain />,
     tag: "Desktop UX",
     button: "View Figma"
+  },
+  {
+    title: "Log Analysis Dashboard",
+    subtitle: "Bachelor's Thesis Year 3 Project at HKR",
+    desc: "Designed an AI-assisted dashboard that simplifies complex firmware log analysis using multi-agent LLM workflows. Conducted UX research, designed user flows, wireframes, and interactive prototypes to improve interpretability.",
+    link: "https://www.figma.com/design/N4lC2XzR0YTCr7pNfylcKF/Axis_Log_Analysis?t=WbrfH2kO5qgspAY9-0",
+    icon: <FaRobot />,
+    tag: "AI + UI Figma Prototype",
+    button: "View Design"
   }
 ];
 
 const uxResearch = [
-  {
-    title: "Log Analysis Dashboard",
-    subtitle: "Master's Thesis",
-    desc: "Designed an AI-assisted dashboard that simplifies complex firmware log analysis using multi-agent LLM workflows. Conducted UX research, designed user flows, wireframes, and interactive prototypes to improve interpretability.",
-    link: "YOUR_LOG_ANALYSIS_CASE_STUDY_LINK",
-    icon: <FaRobot />,
-    tag: "AI + UX",
-    button: "View Case Study"
-  },
+  
   {
     title: "Axis Camera Station",
     subtitle: "UX Case Study",
     desc: "A comprehensive UX case study exploring how QA engineers interpret access control logs. Included user interviews, personas, journey mapping, accessibility improvements, and AI-assisted visualization concepts.",
-    link: "YOUR_AXIS_CAMERA_STATION_CASE_STUDY_LINK",
+    link: "https://miro.com/app/board/uXjVIGR5dps=/",
     icon: <FaUsers />,
     tag: "Case Study",
     button: "View Case Study"
+  },
+   {
+    title: "Travel Companion App",
+    subtitle: "UX Case Study",
+    desc: "A comprehensive UX case study exploring the design of a travel planning application.",
+    link: "https://miro.com/app/board/uXjVI1qhpvI=/",
+    icon: <FaUsers />,
+    tag: "Case Study",
+    button: "View Case Study"
+  }
+];  
+const softwareProjects = [
+  {
+    title: "Fall Detection Android App",
+    subtitle: "Masters in Computer Science - Year 3 Project (India)",
+    desc: "Developed an Android application for detecting falls using mobile sensor data. The project focused on improving safety through real-time monitoring and automated fall detection techniques.",
+    link: "https://github.com/Lakshmi-vishal/Fall-Detection---Android-App",
+    icon: <FaGithub />,
+    tag: "Android Development",
+    button: "View GitHub"
+  },
+  {
+    title: "Data Integrity Using Cryptography",
+    subtitle: "Bachelor Thesis Project - Computer Science (India)",
+    desc: "Developed a C# application implementing cryptographic techniques to ensure data integrity and secure information handling.",
+    link: "https://github.com/Lakshmi-vishal/Data-Integrity-using-Cryptography",
+    icon: <FaGithub />,
+    tag: "C# + Cryptography",
+    button: "View GitHub"
+  },
+  {
+    title: "Lakshmi's LinkedIn Clone",
+    subtitle: "React JS Hobby Project",
+    desc: "Created a LinkedIn-inspired web application using React JS to practice frontend development, component-based architecture, and responsive UI design.",
+    link: "https://github.com/Lakshmi-vishal/My-Linkedin-clone",
+    icon: <FaGithub />,
+    tag: "React JS",
+    button: "View GitHub"
+  },
+  {
+    title: "Nougat Nile Cycles",
+    subtitle: "C# Hobby Project",
+    desc: "Developed a C# based application as a hobby project to explore software development concepts and application design.",
+    link: "https://github.com/Lakshmi-vishal/NougatNileCycles",
+    icon: <FaGithub />,
+    tag: "C# Application",
+    button: "View GitHub"
   }
 ];
 
