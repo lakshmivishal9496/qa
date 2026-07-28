@@ -35,7 +35,7 @@ const Contributions = () => {
     title: "Soft Health",
     subtitle: "Mental Wellness Desktop App (Year 1 Project at HKR)",
     desc: "Created a calming desktop interface that delivers personalized wellness recommendations based on MBTI personality assessments, balancing accessibility with an empathetic user experience.",
-    link: "YOUR_SOFT_HEALTH_FIGMA_LINK",
+    link: "https://www.figma.com/design/3SkQXd6PGdh4OE8FOpUwCu/Soft-Health?node-id=1-117&t=r1Q5Ygr0iCzZcFny-0Y",
     icon: <FaBrain />,
     tag: "Desktop UX",
     button: "View Figma"
