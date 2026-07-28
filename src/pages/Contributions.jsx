@@ -48,9 +48,9 @@ const Contributions = () => {
     icon: <FaRobot />,
     tag: "AI + UI Figma Prototype",
     button: "View Design"
-  }
+  },
    {
-    title: "Log Analysis Thesis UI Design that I presented on my Bachelor's Thesis Interview which got me the opportunity ",
+    title: "Log Analysis Thesis Draft UI Design that I presented just using thesis job description on my Bachelor's Thesis Interview which got me the opportunity ",
     subtitle: "Bachelor's Thesis Year 3 Project at Axis Communications",
     desc: "Designed an AI-assisted dashboard that simplifies complex firmware log analysis using multi-agent LLM workflows. Conducted UX research, designed user flows, wireframes, and interactive prototypes to improve interpretability.",
     link: "https://www.figma.com/design/KWXk4dgQrlPnQ1w8wXTSWQ/AutomatedLogging?t=0CRgjuW5vsDuUAYC-0",
@@ -82,6 +82,15 @@ const uxResearch = [
   }
 ];  
 const softwareProjects = [
+   {
+    title: "Svenska_landet_Website",
+    subtitle: "JavaScript + Css Effects Hobby Project",
+    desc: "Developed an interactive website with engaging CSS animations and JavaScript functionality.",
+    link: "https://svensklandet-erfarenhet.vercel.app/",
+    icon: <FaGithub />,
+    tag: "Web Development",
+    button: "View Live Project"
+  },
   {
     title: "Fall Detection Android App",
     subtitle: "Masters in Computer Science - Year 3 Project (India)",
@@ -159,6 +168,33 @@ const softwareProjects = [
           ))}
         </div>
       </section>
+           {/* UX Research */}
+      <section className="contrib-section">
+        <h2 className="section-label">
+          <FaProjectDiagram /> UX Research & Case Studies
+        </h2>
+
+        <div className="contributions-grid mini-grid">
+          {uxResearch.map((item, index) => (
+            <div className="contribution-card doc-highlight" key={index}>
+              <div className="card-tag">{item.tag}</div>
+              <div className="card-icon">{item.icon}</div>
+              <h3>{item.title}</h3>
+              <h4>{item.subtitle}</h4>
+              <p>{item.desc}</p>
+
+              <a
+                href={item.link}
+                target="_blank"
+                rel="noreferrer"
+                className="view-btn"
+              >
+                View Case Study
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
       {/* Software Development Projects */}
 <section className="contrib-section">
   <h2 className="section-label">
@@ -188,33 +224,7 @@ const softwareProjects = [
   </div>
 </section>
 
-      {/* UX Research */}
-      <section className="contrib-section">
-        <h2 className="section-label">
-          <FaProjectDiagram /> UX Research & Case Studies
-        </h2>
-
-        <div className="contributions-grid mini-grid">
-          {uxResearch.map((item, index) => (
-            <div className="contribution-card doc-highlight" key={index}>
-              <div className="card-tag">{item.tag}</div>
-              <div className="card-icon">{item.icon}</div>
-              <h3>{item.title}</h3>
-              <h4>{item.subtitle}</h4>
-              <p>{item.desc}</p>
-
-              <a
-                href={item.link}
-                target="_blank"
-                rel="noreferrer"
-                className="view-btn"
-              >
-                View Case Study
-              </a>
-            </div>
-          ))}
-        </div>
-      </section>
+ 
     </div>
   );
 };
