@@ -49,6 +49,15 @@ const Contributions = () => {
     tag: "AI + UI Figma Prototype",
     button: "View Design"
   }
+   {
+    title: "Log Analysis Thesis UI Design that I presented on my Bachelor's Thesis Interview which got me the opportunity ",
+    subtitle: "Bachelor's Thesis Year 3 Project at Axis Communications",
+    desc: "Designed an AI-assisted dashboard that simplifies complex firmware log analysis using multi-agent LLM workflows. Conducted UX research, designed user flows, wireframes, and interactive prototypes to improve interpretability.",
+    link: "https://www.figma.com/design/KWXk4dgQrlPnQ1w8wXTSWQ/AutomatedLogging?t=0CRgjuW5vsDuUAYC-0",
+    icon: <FaRobot />,
+    tag: "AI + UI Figma Prototype",
+    button: "View Design"
+  }
 ];
 
 const uxResearch = [
