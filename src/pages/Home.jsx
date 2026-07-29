@@ -23,7 +23,7 @@ const Home = () => {
             <Link to="/about" className="btn-secondary">
               My Experience
             </Link>
-<a href="/assets/Resume.pdf" download="Lakshmi_UX_Resume.pdf" className="download-btn">
+<a href="/assets/Resume.pdf" download="Resume.pdf" className="download-btn">
   <span>Download CV</span>
   <div className="liquid"></div>
 </a>
