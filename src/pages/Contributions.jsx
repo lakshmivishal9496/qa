@@ -87,7 +87,7 @@ const softwareProjects = [
     subtitle: "JavaScript + Css Effects Hobby Project",
     desc: "Developed an interactive website with engaging CSS animations and JavaScript functionality.",
     link: "https://svensklandet-erfarenhet.vercel.app/",
-    icon: <FaGithub />,
+    icon: <FaBrain />,
     tag: "Web Development",
     button: "View Live Project"
   },
