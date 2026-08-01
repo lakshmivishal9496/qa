@@ -72,6 +72,15 @@ const uxResearch = [
     button: "View Case Study"
   },
    {
+    title: "Leasande Bil Website",
+    subtitle: "UX Case Study",
+    desc: "A comprehensive UX case study on leasing car websites.",
+    link: "https://balsamiq.cloud/s6r8d4b/pq1rcj",
+    icon: <FaUsers />,
+    tag: "Case Study",
+    button: "View Case Study"
+  }
+   {
     title: "Travel Companion App",
     subtitle: "UX Case Study",
     desc: "A comprehensive UX case study exploring the design of a travel planning application.",
