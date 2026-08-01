@@ -79,7 +79,7 @@ const uxResearch = [
     icon: <FaUsers />,
     tag: "Case Study",
     button: "View Case Study"
-  }
+  },
    {
     title: "Travel Companion App",
     subtitle: "UX Case Study",
