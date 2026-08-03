@@ -1,4 +1,6 @@
-/* Container and Hero Section */
+/* =========================================================
+   HOME PAGE — Hero + Stats
+========================================================= */
 .home-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -12,11 +14,18 @@
   gap: 50px;
   padding: 100px 0;
   min-height: 70vh;
+  animation: fadeIn 0.8s ease;
 }
 
-.hero-content { flex: 1.2; }
+.hero-content {
+  flex: 1.2;
+}
 
-/* Image Overflow Fix */
+.badge {
+  display: inline-block;
+  animation: popIn 0.6s ease;
+}
+
 .hero-image-container {
   flex: 0.8;
   position: relative;
@@ -26,12 +35,13 @@
 
 .profile-img {
   width: 100%;
-  max-width: 350px; /* Limits size to prevent overflow */
+  max-width: 350px;
   height: auto;
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
   border: 4px solid #ffcc00;
   z-index: 2;
   box-shadow: 0 0 30px rgba(255, 204, 0, 0.4);
+  animation: floatImg 4s ease-in-out infinite;
 }
 
 .oval-background {
@@ -44,11 +54,11 @@
   z-index: 1;
 }
 
-/* Button Styling - Yellow Highlight Effects */
 .hero-btns {
   display: flex;
   gap: 20px;
   margin-top: 30px;
+  flex-wrap: wrap;
 }
 
 .btn-primary {
@@ -71,7 +81,7 @@
 
 .btn-secondary {
   background: transparent;
-  color: #ffcc00; /* Yellow text is now visible */
+  color: #ffcc00;
   padding: 14px 28px;
   border-radius: 8px;
   font-weight: 700;
@@ -83,9 +93,9 @@
 .btn-secondary:hover {
   background: rgba(255, 204, 0, 0.1);
   box-shadow: 0 0 15px rgba(255, 204, 0, 0.2);
+  transform: translateY(-3px);
 }
 
-/* Stats Cards Alignment */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -99,9 +109,17 @@
   border-radius: 15px;
   border-bottom: 4px solid #ffcc00;
   transition: 0.3s;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
 }
 
-.stat-card:hover { transform: translateY(-10px); }
+.stat-card:nth-child(1) { animation-delay: 0.1s; }
+.stat-card:nth-child(2) { animation-delay: 0.25s; }
+.stat-card:nth-child(3) { animation-delay: 0.4s; }
+
+.stat-card:hover {
+  transform: translateY(-10px);
+}
 
 .stat-header {
   display: flex;
@@ -114,6 +132,7 @@
   font-size: 2rem;
   color: #ffcc00;
 }
+
 .download-btn {
   position: relative;
   padding: 10px 25px;
@@ -135,7 +154,6 @@
   transform: scale(1.05);
 }
 
-/* The Glowing Liquid Effect [Online Tutorials Style] */
 .download-btn .liquid {
   position: absolute;
   top: -80px;
@@ -150,7 +168,294 @@
   pointer-events: none;
 }
 
+/* =========================================================
+   PROJECTS PAGE — page header + ProjectCard (portfolio-row)
+========================================================= */
+.projects-page {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 60px;
+  animation: fadeIn 0.7s ease;
+}
+
+.page-header h1 {
+  font-size: 2.5rem;
+}
+
+.page-header p {
+  color: #94a3b8;
+  margin-top: 10px;
+}
+
+.trace-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.portfolio-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  width: 100%;
+  margin-bottom: 120px;
+  opacity: 0;
+  animation: fadeInUp 0.7s ease forwards;
+}
+
+.row-reverse {
+  flex-direction: row-reverse;
+}
+
+.portfolio-row:nth-child(even) {
+  margin-left: 80px;
+}
+
+.portfolio-image {
+  flex: 1;
+  max-width: 520px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid #334155;
+  background: #020617;
+}
+
+.main-img {
+  width: 100%;
+  height: 360px;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.portfolio-image:hover .main-img {
+  transform: scale(1.05);
+}
+
+.portfolio-text {
+  flex: 1;
+  max-width: 620px;
+}
+
+.org-label {
+  color: #94a3b8;
+  letter-spacing: 2px;
+  font-family: "Courier New", monospace;
+  font-size: 0.9rem;
+}
+
+.portfolio-title {
+  color: #ffcc00;
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin: 12px 0 18px;
+  animation: fallEffect 0.8s ease-out forwards;
+}
+
+.project-desc-clean {
+  color: #f1f5f9;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+
+.tag-group {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.yellow-outline-tag {
+  border: 1px solid #ffcc00;
+  color: #ffcc00;
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-family: monospace;
+  transition: all 0.25s ease;
+}
+
+.yellow-outline-tag:hover {
+  background: #ffcc00;
+  color: #020617;
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes popIn {
+  from { opacity: 0; transform: scale(0.85); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes floatImg {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
 @keyframes wave {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
+}
+
+@keyframes fallEffect {
+  0% { opacity: 0; transform: translateY(-40px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* =========================================================
+   RESPONSIVE — Tablet (≤1024px)
+========================================================= */
+@media (max-width: 1024px) {
+  .hero-section {
+    gap: 30px;
+    padding: 70px 0;
+  }
+
+  .stats-grid {
+    gap: 18px;
+  }
+
+  .portfolio-row {
+    gap: 40px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — Small tablet / large phone (≤900px)
+========================================================= */
+@media (max-width: 900px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 0;
+    gap: 35px;
+  }
+
+  .hero-btns {
+    justify-content: center;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .portfolio-row,
+  .row-reverse {
+    flex-direction: column;
+  }
+
+  .portfolio-row:nth-child(even) {
+    margin-left: 0;
+  }
+
+  .portfolio-image {
+    max-width: 100%;
+  }
+
+  .main-img {
+    height: 260px;
+  }
+
+  .portfolio-title {
+    font-size: 1.9rem;
+  }
+
+  .portfolio-text {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .tag-group {
+    justify-content: center;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — Mobile (≤600px)
+========================================================= */
+@media (max-width: 600px) {
+  .home-container {
+    padding: 0 12px;
+  }
+
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .profile-img {
+    max-width: 240px;
+  }
+
+  .hero-btns {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+
+  .hero-btns a {
+    justify-content: center;
+  }
+
+  .page-header h1 {
+    font-size: 1.9rem;
+  }
+
+  .portfolio-row {
+    margin-bottom: 70px;
+  }
+
+  .main-img {
+    height: 200px;
+  }
+
+  .portfolio-title {
+    font-size: 1.5rem;
+  }
+
+  .project-desc-clean {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE — Extra small (≤380px)
+========================================================= */
+@media (max-width: 380px) {
+  .badge {
+    font-size: 0.75rem;
+  }
+
+  .hero-content h1 {
+    font-size: 1.4rem;
+  }
+
+  .stat-card {
+    padding: 20px;
+  }
+
+  .yellow-outline-tag {
+    font-size: 0.75rem;
+    padding: 5px 10px;
+  }
 }

@@ -9,6 +9,9 @@
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  flex-wrap: wrap;
+  gap: 15px;
+  transition: padding 0.3s ease;
 }
 
 .nav-logo {
@@ -17,23 +20,90 @@
   gap: 10px;
   font-size: 1.5rem;
   font-weight: bold;
-  color: var(--axis-yellow);
+  color: var(--axis-yellow, #ffcc00);
 }
 
 .nav-links {
   display: flex;
   gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .nav-links a {
   text-decoration: none;
-  color: var(--text-dim);
+  color: var(--text-dim, #94a3b8);
   display: flex;
   align-items: center;
   gap: 8px;
-  transition: 0.3s;
+  transition: color 0.3s ease, transform 0.3s ease;
+  position: relative;
+  white-space: nowrap;
 }
 
-.nav-links a:hover, .nav-links a.active {
-  color: var(--axis-yellow);
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: #ffcc00;
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 900px) {
+  .navbar {
+    padding: 1.2rem 1.5rem;
+  }
+
+  .nav-links {
+    gap: 1.2rem;
+  }
+}
+
+/* ===== Mobile: stack logo above links ===== */
+@media (max-width: 700px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 12px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 0.9rem;
+    font-size: 0.9rem;
+  }
+
+  .nav-logo {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===== Small phones: wrap links into two neat rows ===== */
+@media (max-width: 420px) {
+  .nav-links {
+    gap: 0.6rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .nav-links a span,
+  .nav-links a {
+    gap: 5px;
+  }
 }

@@ -253,23 +253,100 @@
   border-radius: 5px;
 }
 
-/* Responsive Design */
+/* =========================================================
+   RESPONSIVE — Tablet & below: swap 3D carousel for timeline
+========================================================= */
 @media (max-width: 768px) {
+  .experience-container {
+    padding: 60px 16px;
+  }
+
+  .section-title {
+    font-size: 1.9rem;
+  }
+
   .slider-wrapper,
   .nav-dots {
     display: none;
   }
-  
+
   .timeline-view {
     display: block;
   }
-  
+}
+
+/* =========================================================
+   RESPONSIVE — Mobile (≤480px)
+========================================================= */
+@media (max-width: 480px) {
+  .experience-container {
+    padding: 45px 12px;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
   .section-subtitle {
-    content: "Scroll to explore my journey";
+    font-size: 0.85rem;
+    margin-bottom: 35px;
+  }
+
+  .timeline-view {
+    padding: 0 8px;
+  }
+
+  .timeline-item {
+    padding-left: 32px;
+    margin-bottom: 30px;
+  }
+
+  .timeline-content {
+    padding: 16px;
+  }
+
+  .timeline-content h3 {
+    font-size: 1.05rem;
+  }
+
+  .timeline-content p {
+    font-size: 0.85rem;
   }
 }
 
-/* Animations */
+/* =========================================================
+   RESPONSIVE — Extra small (≤360px)
+========================================================= */
+@media (max-width: 360px) {
+  .section-title {
+    font-size: 1.3rem;
+  }
+
+  .timeline-item {
+    padding-left: 26px;
+  }
+
+  .timeline-marker {
+    width: 10px;
+    height: 10px;
+  }
+
+  .timeline-content {
+    padding: 12px;
+  }
+
+  .timeline-content h3 {
+    font-size: 0.95rem;
+  }
+
+  .timeline-date {
+    font-size: 0.75rem;
+  }
+}
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
