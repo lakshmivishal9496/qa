@@ -57,6 +57,15 @@ const Contributions = () => {
     icon: <FaRobot />,
     tag: "AI + UI Figma Prototype",
     button: "View Design"
+  },
+  {
+    title: "Lakshmi Portfolio Mobile App ",
+    subtitle: "Personal Portfolio Mobile App Design",
+    desc: "Designed a mobile version of my personal portfolio to showcase my UX/UI and software development projects. Focused on responsive design, intuitive navigation, and interactive elements to enhance user engagement.",
+    link: "https://www.figma.com/design/QiB7MVjNbx2WLmgdanTtLN/Lakshmi_Portfolio?node-id=0-1&p=f&t=mmnikDdaob9mDRwM-0",
+    icon: <FaRobot />,
+    tag: "AI + UI Figma Prototype",
+    button: "View Design"
   }
 ];
 
